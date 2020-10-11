@@ -8,7 +8,6 @@ zoizbot.on("message", async message => {
     const command = args.shift().toLowerCase();
 
 
-
     //ping pong, example from documentation
     if (command === "ping") {
         const m = await message.channel.send("Ping?");
@@ -22,8 +21,6 @@ zoizbot.on("message", async message => {
             return message.reply("Sorry, you don't have permissions to use this!");
 
         let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-        if (!member)
-            return message.channel.send("Invalid User")
         if (!member)
             return message.reply("Please mention a valid member of this server");
         if (!member.kickable)
@@ -44,6 +41,7 @@ zoizbot.on("message", async message => {
     if (command === "ban") {
         if (!message.member.hasPermission("BAN_MEMBERS"))
             return message.channel.send("Sorry, you don't have permissions to use this!")
+
         let member = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
 
         if (!member)
