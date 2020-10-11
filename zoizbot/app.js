@@ -3,7 +3,7 @@
 const Discord = require("discord.js");// bring us the magic / kom maar op met die voorgeschreven library
 const zoizbot = new Discord.Client(); // discord client is now made zoizbot. wat een lol zeg tjonge 
 
-
+var fs = require('fs');
 
 console.log(`starting zoizbot...`);
 console.log(`loading configuration file...`)
@@ -18,14 +18,17 @@ zoizbot.on("ready", () => {
     zoizbot.user.setActivity(`Ask me something with >`); // change this to whatever you want. check out https://discord.js.org/#/docs/main/12.3.1/general/welcome
 });
 
-zoizbot.on("guildCreate", guild => {
+zoizbot.on("guildJoin", guild => {
     console.log(`I have joined ${guild.name}, I will be serving ${guild.memberCount} members!`); // Join server message in the console
     message.channel.send(`Hello ${guild.name} thank you for having me!`);
 });
 
-zoizbot.on("guildDelete", guild => {
+zoizbot.on("guildLeave", guild => {
     console.log(`Adios! i will be leaving: ${guild.name} It was fun while it lasted!`);
 });
+
+
+eval(fs.readFileSync('./commands/examples.js') + ''); //dirty but working trick to keep app main clean...
 
 
 zoizbot.login(config.token); //reading the "token" from the const config = conf.json btw the one you see is invalid now

@@ -36,6 +36,9 @@
     <AdditionalFiles Include="conf.json">
       <SubType>Code</SubType>
     </AdditionalFiles>
+    <Content Include="commands\examples.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
