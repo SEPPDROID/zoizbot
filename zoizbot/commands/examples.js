@@ -20,7 +20,7 @@ zoizbot.on("message", async message => {
         if (!message.member.hasPermission("KICK_MEMBERS"))
             return message.reply("Sorry, you don't have permissions to use this!");
 
-        let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+        let member = message.guild.member(message.mentions.users.first()) || message.mentions.members.first(args[0])
         if (!member)
             return message.reply("Please mention a valid member of this server");
         if (!member.kickable)
@@ -42,10 +42,10 @@ zoizbot.on("message", async message => {
         if (!message.member.hasPermission("BAN_MEMBERS"))
             return message.channel.send("Sorry, you don't have permissions to use this!")
 
-        let member = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
+        let member = message.guild.member(message.mentions.users.first()) || message.mentions.members.first(args[0])
 
         if (!member)
-            return message.channel.send("Please mention a valid member of this server")
+            return message.reply("Please mention a valid member of this server")
         if (member.hasPermission("BAN_MEMBERS"))
             return message.reply("I cannot ban this user! Invalid Permissions")
         let banReason = args.join(" ").slice(22);
