@@ -1,13 +1,16 @@
 'use strict';
 
-const Discord = require(`discord.js`); // bring us the magic / kom maar op met die voorgeschreven library
-const config = require(`.\conf.json`); // de conf ophalen die we net gemaakt hadden / picking up the config file we made
+const Discord = require("discord.js");// bring us the magic / kom maar op met die voorgeschreven library
 const zoizbot = new Discord.Client(); // discord client is now made zoizbot. wat een lol zeg tjonge 
 
 
+
 console.log(`starting zoizbot...`);
+console.log(`loading configuration file...`)
 
+const config = require("./conf.json"); // de conf ophalen die we net gemaakt hadden / picking up the config file we made
 
+console.log(`Ready!`) //normally if you would make it properly you would catch any errors when loading the config
 
 zoizbot.on("ready", () => {
     console.log(`Zoizbot has started, and is serving ${zoizbot.users.cache.size} users, in ${zoizbot.guilds.cache.size} guilds.`); // you can display anything you want here, all the functions are available in de documentation from discord.js
@@ -16,7 +19,7 @@ zoizbot.on("ready", () => {
 });
 
 zoizbot.on("guildCreate", guild => {
-    console.log(`Thank you for having me ${guild.name}! I will be serving ${guild.memberCount} members!`); // Join server message in the console
+    console.log(`I have joined ${guild.name}, I will be serving ${guild.memberCount} members!`); // Join server message in the console
     message.channel.send(`Hello ${guild.name} thank you for having me!`);
 });
 
@@ -25,4 +28,4 @@ zoizbot.on("guildDelete", guild => {
 });
 
 
-zoizbot.login(config.token); //reading the "token" from the const config = conf.json 
+zoizbot.login(config.token); //reading the "token" from the const config = conf.json btw the one you see is invalid now

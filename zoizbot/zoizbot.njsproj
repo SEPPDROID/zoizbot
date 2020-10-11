@@ -5,7 +5,8 @@
     <Name>zoizbot</Name>
     <RootNamespace>zoizbot</RootNamespace>
     <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
-    <NodeExePath>C:\Program Files\nodejs\node.exe</NodeExePath>
+    <NodeExePath>
+    </NodeExePath>
     <JavaScriptTestFramework>ExportRunner</JavaScriptTestFramework>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -32,9 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Content Include="conf.json">
+    <AdditionalFiles Include="conf.json">
       <SubType>Code</SubType>
-    </Content>
+    </AdditionalFiles>
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
