@@ -40,7 +40,7 @@ zoizbot.on("message", async message => {
 
     if (command === "ban") {
         if (!message.member.hasPermission("BAN_MEMBERS"))
-            return message.channel.send("Sorry, you don't have permissions to use this!")
+            return message.reply("Sorry, you don't have permissions to use this!")
 
         let member = message.guild.member(message.mentions.users.first()) || message.mentions.members.first(args[0])
 
