@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "zoizbot", "zoizbot\zoizbot.njsproj", "{B8D80089-6D3A-40C6-B875-8EF4A9CBD354}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8D80089-6D3A-40C6-B875-8EF4A9CBD354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D80089-6D3A-40C6-B875-8EF4A9CBD354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D80089-6D3A-40C6-B875-8EF4A9CBD354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D80089-6D3A-40C6-B875-8EF4A9CBD354}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C25FC7B3-B82E-480F-BEB9-BADA694167CD}
+	EndGlobalSection
+EndGlobal
