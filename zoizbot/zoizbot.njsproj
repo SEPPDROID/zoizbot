@@ -48,6 +48,9 @@
     <Content Include="commands\ping.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="commands\reload.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Legacy Commands\examples.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
