@@ -5,14 +5,6 @@
  * ive added the permission test, to make sure not everybody spams reload
  */
 exports.run = (zoizbot, message, args) => {
-    const config = require("../conf.json");
-    message.channel.send({ embed: { "title": "Reload Tool", "color": 15746887, "fields": [{ "name": "Reload command file Syntax", "value": ` \n${config.prefix}reloadmoderation "command"\n${config.prefix}reloadgeneral "command" \n${config.prefix}reloadfun "command"` }] } });
-
-
-    /*
-     * uncomment if you have commandfiles in de /commands folder
-     * i did it the easy way. so should you haha
-     * 
     if (!message.member.hasPermission("ADMINISTRATOR"))
         return message.reply("Sorry, you don't have permissions to use this!");
     if (!args || args.length < 1) return message.reply("Please provide the command name to reload.");
@@ -25,5 +17,4 @@ exports.run = (zoizbot, message, args) => {
     const props = require(`./${commandName}.js`);
     zoizbot.commands.set(commandName, props);
     message.reply(`The command ${commandName} has been reloaded`);
-    */
 };

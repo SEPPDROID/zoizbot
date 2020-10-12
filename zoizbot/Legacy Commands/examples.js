@@ -1,6 +1,6 @@
 
 /*
- * This is for your reference. this is how we dit it first
+ * This is for your reference. this is how we did it first
  * check commit 459446526602d35af9cec596b552cddeeac4c992
  * 
  * we now use a "handler" and keep it organised with command files

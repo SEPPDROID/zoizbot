@@ -45,15 +45,24 @@
     <Content Include="commandloader.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="commands\fun\reloadfun.js" />
     <Content Include="commands\general\hello.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="commands\general\ping.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="commands\general\reloadgeneral.js" />
+    <Content Include="commands\moderation\ban.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="commands\moderation\embeddedkick.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="commands\moderation\kick.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="commands\moderation\reloadmoderation.js" />
     <Content Include="commands\reload.js">
       <SubType>Code</SubType>
     </Content>

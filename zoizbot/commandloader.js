@@ -7,8 +7,8 @@ fs.readdir (`./commands/`, (err, files) => {
         let commandName = file.split(".")[0];
         console.log(` attempting to load command: ${commandName}`); // adding everything to the collection
         zoizbot.commands.set(commandName, props);
-        loaded++; // beginners trick to check if all the folder-commands where loaded // i really dont know what im doing here hahahaha
     });
+    loaded++; // beginners trick to check if all the folder-commands where loaded // i really dont know what im doing here hahahaha //edit2 i made it even worse :(
     if (loaded == 4) {              // this is the funniest shit i have ever done. pure for asthetics. please change this to a different way
         console.log(" ")
         console.log(` all commands loaded!`);
@@ -24,8 +24,8 @@ fs.readdir (`./commands/fun/`, (err, files) => {
         let commandName = file.split(".")[0];
         console.log(` attempting to load command: ${commandName}`); 
         zoizbot.commands.set(commandName, props);
-        loaded++;
     });
+    loaded++;
     if (loaded == 4) {
         console.log(" ")
         console.log(` all commands loaded!`);
@@ -41,8 +41,8 @@ fs.readdir(`./commands/general/`, (err, files) => {
         let commandName = file.split(".")[0];
         console.log(` attempting to load command: ${commandName}`); 
         zoizbot.commands.set(commandName, props);
-        loaded++;
     });
+    loaded++;
     if (loaded == 4) {
         console.log(" ")
         console.log(` all commands loaded!`);
@@ -58,8 +58,8 @@ fs.readdir(`./commands/moderation/`, (err, files) => {  //copy paste for differe
         let commandName = file.split(".")[0];
         console.log(` attempting to load command: ${commandName}`); 
         zoizbot.commands.set(commandName, props);
-        loaded++;
     });
+    loaded++;
     if (loaded == 4) {
         console.log(" ")
         console.log(` all commands loaded!`);
