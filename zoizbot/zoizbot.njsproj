@@ -53,6 +53,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="commands\general\reloadgeneral.js" />
+    <Content Include="commands\moderation\addrole.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="commands\moderation\ban.js">
       <SubType>Code</SubType>
     </Content>
