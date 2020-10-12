@@ -1,16 +1,17 @@
 zoizbot.on("ready", () => {
     zoizbot.user.setActivity(config.activity); // change this to whatever you want (in conf.json).
-    console.log(`Zoizbot has started, and is serving ${zoizbot.users.cache.size} users, in ${zoizbot.guilds.cache.size} guilds.`); // you can display anything you want here, all the functions are available in de documentation from discord.js
-    console.log("==================LISTENING===================");
+    console.log(` Zoizbot is listening, `); // you can display anything you want here, all the functions are available in de documentation from discord.js
+    console.log(` and is currently serving ${ zoizbot.users.cache.size } users, in ${ zoizbot.guilds.cache.size } guilds.`)
+    console.log(" ==================LISTENING===================");
 });
 
 zoizbot.on("guildJoin", guild => {
-    console.log(`I have joined ${guild.name}, I will be serving ${guild.memberCount} members!`); // Join server message in the console
-    message.channel.send(`Hello ${guild.name} thank you for having me!`);
+    console.log(` I have joined ${guild.name}, I will be serving ${guild.memberCount} members!`); // Join server message in the console
+    message.channel.send(` Hello ${guild.name} thank you for having me!`);
 });
 
 zoizbot.on("guildLeave", guild => {
-    console.log(`Adios! i will be leaving: ${guild.name}, it was fun while it lasted!`); //letting you know he be headin out
+    console.log(` Adios! i will be leaving: ${guild.name}, it was fun while it lasted!`); //letting you know he be headin out
 });
 
 zoizbot.on("message", async message => {

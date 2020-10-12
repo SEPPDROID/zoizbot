@@ -42,10 +42,16 @@
     <Content Include="commandhandler.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="commands\hello.js">
+    <Content Include="commandloader.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="commands\ping.js">
+    <Content Include="commands\general\hello.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="commands\general\ping.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="commands\moderation\kick.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="commands\reload.js">
@@ -57,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="commands\" />
+    <Folder Include="commands\general\" />
+    <Folder Include="commands\moderation\" />
+    <Folder Include="commands\fun\" />
     <Folder Include="Legacy Commands\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
