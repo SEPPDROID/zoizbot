@@ -5,30 +5,38 @@ const zoizbot = new Discord.Client(); // discord client is now made zoizbot. wat
 
 var fs = require('fs');
 
+zoizbot.commands = new Discord.Collection();
+
+console.log("==============================================");
 console.log(`starting zoizbot...`);
+eval(fs.readFileSync('./bootscreen.js') + ''); // please delete this, using readFileSync 1 time was bad enough. But I didnt want ascii art in my main file ;)
 console.log(`loading configuration file...`)
 
 const config = require("./conf.json"); // de conf ophalen die we net gemaakt hadden / picking up the config file we made
 
-console.log(`Ready!`) //normally if you would make it properly you would catch any errors when loading the config
+console.log(`configuration loaded!`) // should make an catch error to debug conf file but whatever
+console.log("==============================================");
+console.log(`loading the commandhandler...`)
 
-zoizbot.on("ready", () => {
-    console.log(`Zoizbot has started, and is serving ${zoizbot.users.cache.size} users, in ${zoizbot.guilds.cache.size} guilds.`); // you can display anything you want here, all the functions are available in de documentation from discord.js
+eval(fs.readFileSync('./commandhandler.js') + '');
 
-    zoizbot.user.setActivity(`Ask me something with >`); // change this to whatever you want. check out https://discord.js.org/#/docs/main/12.3.1/general/welcome
+console.log(`commandhandler loaded!`)
+console.log("==============================================");
+console.log(`loading command-files...`)
+
+fs.readdir(`./commands/`, (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+        if (!file.endsWith(".js")) return; // only load js files. no garbage collection
+        let props = require(`./commands/${file}`); // get the command name from the file.js
+        let commandName = file.split(".")[0];
+        console.log(`attempting to load command ${commandName}`); // adding everything to the collection
+        zoizbot.commands.set(commandName, props);
+    });
+    console.log(`all commands loaded!`);
+    console.log("==============================================");
 });
 
-zoizbot.on("guildJoin", guild => {
-    console.log(`I have joined ${guild.name}, I will be serving ${guild.memberCount} members!`); // Join server message in the console
-    message.channel.send(`Hello ${guild.name} thank you for having me!`);
-});
-
-zoizbot.on("guildLeave", guild => {
-    console.log(`Adios! i will be leaving: ${guild.name} It was fun while it lasted!`);
-});
-
-
-eval(fs.readFileSync('./commands/examples.js') + ''); //dirty but working trick to keep app main clean...
 
 
 zoizbot.login(config.token); //reading the "token" from the const config = conf.json btw the one you see is invalid now

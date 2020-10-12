@@ -36,14 +36,25 @@
     <AdditionalFiles Include="conf.json">
       <SubType>Code</SubType>
     </AdditionalFiles>
-    <Content Include="commands\examples.js">
+    <Content Include="bootscreen.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="commandhandler.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="commands\hello.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="commands\ping.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Legacy Commands\examples.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="commands\" />
+    <Folder Include="Legacy Commands\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
