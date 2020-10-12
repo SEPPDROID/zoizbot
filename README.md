@@ -10,7 +10,9 @@ i didnt even remove the text behind the emoji i just copied it from my google se
 
 feel free to copy and make it 10 times better
 
-# upadates:
+# updates:
+
+- switch to master was succesfull
 
 - changed main branch from "main" to "master" ; git client didnt like main anymore... the wonderworld of git...
 
