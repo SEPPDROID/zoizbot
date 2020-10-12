@@ -9,3 +9,9 @@ you think im going to put any effort in this shit?
 i didnt even remove the text behind the emoji i just copied it from my google search
 
 feel free to copy and make it 10 times better
+
+# upadates:
+
+- changed main branch from "main" to "master" ; git client didnt like main anymore... the wonderworld of git...
+
+- will update this readme file for others who googled how to make an discord bot.
