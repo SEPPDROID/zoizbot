@@ -37,6 +37,4 @@ fs.readdir(`./commands/`, (err, files) => {
     console.log("==============================================");
 });
 
-
-
-zoizbot.login(config.token); //reading the "token" from the const config = conf.json btw the one you see is invalid now
+zoizbot.login(config.token).catch(console.error); //reading the "token" from the const config = conf.json btw the one you see is invalid now
