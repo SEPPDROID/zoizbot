@@ -1,0 +1,11 @@
+{
+    "method": "GET",
+    "hostname": "joke3.p.rapidapi.com",
+    "port": null,
+    "path": "/v1/joke?nsfw=false",
+    "headers": {
+        "x-rapidapi-host": "joke3.p.rapidapi.com",
+        "x-rapidapi-key": "589805bc00msh85fd454fda665e8p11475cjsnacbc1293e0a5",
+        "useQueryString": true
+    }
+}

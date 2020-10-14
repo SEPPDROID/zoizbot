@@ -45,6 +45,12 @@
     <Content Include="commandloader.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="commands\fun\apiconfigs\joke.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="commands\fun\joke.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="commands\fun\reloadfun.js" />
     <Content Include="commands\general\hello.js">
       <SubType>Code</SubType>
@@ -75,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="commands\" />
+    <Folder Include="commands\fun\apiconfigs\" />
     <Folder Include="commands\general\" />
     <Folder Include="commands\moderation\" />
     <Folder Include="commands\fun\" />
