@@ -7,7 +7,7 @@ zoizbot.on("ready", () => {
 
 zoizbot.on("guildJoin", guild => {
     console.log(` I have joined ${guild.name}, I will be serving ${guild.memberCount} members!`); // Join server message in the console
-    message.channel.send(` Hello ${guild.name} thank you for having me!`);
+    message.channel.send(` Hello ${guild.name}, thank you for having me!`);
 });
 
 zoizbot.on("guildLeave", guild => {
